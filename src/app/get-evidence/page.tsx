@@ -28,8 +28,25 @@ const GetEvidencePage = (props: Props) => {
             placeholder="Write anything you think that is true."
             className="ml-5 h-72 w-96 rounded-sm outline-none border-2 border-gray-700 mt-4 p-4  rounded-br-3xl"
           />
-          <div className="w-full items-center justify-center">
-            <h4>Or</h4>
+          <input
+            type="button"
+            value="Get some evidence!"
+            style={{ fontFamily: "Poppins" }}
+            className="w-96 ml-4 bg-[#242424] mt-2 py-4 px-2 rounded-md text-white text-lg transition-all cursor-pointer hover:bg-[#131313]"
+          />
+          <div className="w-96 mt-4 ml-5  text-center items-center justify-center">
+            <h4
+              className="text-xl font-semibold"
+              style={{ fontFamily: "Poppins" }}
+            >
+              Or
+            </h4>
+            <input
+              type="button"
+              value="Completely random theory evidence!"
+              style={{ fontFamily: "Poppins" }}
+              className="w-96  bg-[#c4a454] mt-2 py-4 px-2 rounded-md text-black mb-4 text-lg transition-all cursor-pointer hover:bg-[#af903f]"
+            />
           </div>
         </div>
         <div className="flex flex-col justify-center items-center"></div>
