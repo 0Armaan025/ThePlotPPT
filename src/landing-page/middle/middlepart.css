@@ -15,6 +15,14 @@
   width: 350px;
 }
 
+.boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+}
+
 .getProvedBtn {
   width: 300px;
   padding-top: 1rem;
@@ -24,5 +32,25 @@
   color: white;
   font-family: "Poppins";
   padding-bottom: 1rem;
-  background-color: #1a1a1a;
+  background-color: #313030;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.rightBox img {
+  height: 340px;
+  width: 500px;
+  margin-top: 50px;
+  border-radius: 6px;
+  margin-left: 140px;
+  box-shadow: 4px 4px 8px 2px black;
+  transition: 0.3s ease-in-out;
+}
+
+.rightBox img:hover {
+  transform: scale(1.03);
+}
+
+.getProvedBtn:hover {
+  background-color: #242424;
 }

@@ -22,7 +22,9 @@ const MiddlePart = (props: Props) => {
           <br />
           <button className="getProvedBtn">Get some evidence!</button>
         </div>
-        <div className="rightBox"></div>
+        <div className="rightBox">
+          <img src="https://cdn.dribbble.com/users/1126935/screenshots/16524076/media/ea5e89630c33cec74d38f2febc6c2b38.png" />
+        </div>
       </div>
     </div>
   );
