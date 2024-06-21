@@ -6,21 +6,21 @@ type Props = {};
 const MiddlePart = (props: Props) => {
   return (
     <div className="middlePartDiv">
-      <div className="boxes flex flex-row">
+      <div className="boxes">
         <div className="leftBox">
-          <h3
-            className="font-bold text-[4rem]"
-            style={{ fontFamily: "Poppins" }}
-          >
-            Let the conspiracy
-          </h3>
-
-          <h4
-            className="font-bold text-[4rem]"
-            style={{ fontFamily: "Poppins" }}
-          >
-            Be True!
+          <h4 className="headlineText" style={{ fontFamily: "Poppins" }}>
+            Let's add some
           </h4>
+
+          <h4 className="headlineText" style={{ fontFamily: "Poppins" }}>
+            real evidence! 🤓
+          </h4>
+          <p>
+            Conspiracy theories are theories which many people believe are true,
+            whereas others people no it's not true, you dumb person.
+          </p>
+          <br />
+          <button className="getProvedBtn">Get some evidence!</button>
         </div>
         <div className="rightBox"></div>
       </div>
