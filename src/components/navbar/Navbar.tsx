@@ -13,18 +13,18 @@ const Navbar = () => {
       </div>
 
       <div className="hidden md:flex space-x-4">
-        <ul className="flex flex-row px-2">
+        <ul className="flex flex-row px-2 list-disc">
           <li className="mr-4">
             <a
-              className="hover:text-gray-800 hover:font-semibold cursor-pointer transition-all text-lg"
+              className="hover:text-gray-500  cursor-pointer transition-all text-lg"
               style={{ fontFamily: "Poppins" }}
             >
               Home
             </a>
           </li>
-          <li>
+          <li className="ml-4">
             <a
-              className="hover:text-gray-800 hover:font-semibold cursor-pointer transition-all text-lg"
+              className="hover:text-gray-500  cursor-pointer transition-all text-lg"
               style={{ fontFamily: "Poppins" }}
             >
               About
@@ -34,8 +34,8 @@ const Navbar = () => {
       </div>
 
       <div>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Sign Up
+        <button className="bg-[#f8d683] hover:bg-[#c4a454] transition-all text-black font-semibold py-2 px-4 rounded">
+          Research
         </button>
       </div>
     </nav>
