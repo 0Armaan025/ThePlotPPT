@@ -18,7 +18,7 @@ Do this:
 <br>
 
 
-** IMPORTANT POINTS **
+**IMPORTANT POINTS**
 
 <br>
 
