@@ -1,17 +1,86 @@
+"use client";
 import Navbar from "@/components/navbar/Navbar";
-import React from "react";
+import React, { useState } from "react";
 import "./getevidencepage.css";
 import "../../app/globals.css";
 
 type Props = {};
 
 const GetEvidencePage = (props: Props) => {
+  const [inputText, setInputText] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleInputChange = (event: any) => {
+    setInputText(event.target.value);
+  };
+
+  const handleGetEvidenceClick = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(
+        "https://5000-0armaan025-conspiracypp-sbtocym0qar.ws-us114.gitpod.io/generate_ppt",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams({ theory: inputText }),
+        }
+      );
+
+      if (response.ok) {
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "generated_presentation.pptx";
+        a.click();
+      } else {
+        console.error("Failed to generate PPT");
+      }
+    } catch (error) {
+      console.error("Error generating PPT:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleRandomTheoryClick = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(
+        "https://5000-0armaan025-conspiracypp-sbtocym0qar.ws-us114.gitpod.io/generate_ppt",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        }
+      );
+
+      if (response.ok) {
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "generated_presentation.pptx";
+        a.click();
+      } else {
+        console.error("Failed to generate PPT");
+      }
+    } catch (error) {
+      console.error("Error generating PPT:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <Navbar />
       <div className="getEvidencePageDiv ">
-        <div className="flex flex-row items-center justify-start ml-8">
-          <div className="flex flex-col justify-start items-start">
+        <div className="flex flex-row items-center justify-center ml-8">
+          <div className="flex flex-col justify-center items-cennter">
             <h3
               className="text-3xl ml-4 mt-8 font-bold"
               style={{ fontFamily: "Playwrite NZ, cursive" }}
@@ -26,15 +95,19 @@ const GetEvidencePage = (props: Props) => {
             </h4>
             <textarea
               placeholder="Write anything you think that is true."
-              className="ml-5 h-72 w-96 rounded-sm outline-none border-2 border-gray-700 mt-4 p-4  rounded-br-3xl"
+              value={inputText}
+              onChange={handleInputChange}
+              className="ml-5 h-72 w-full rounded-sm outline-none border-2 border-gray-700 mt-4 p-4 rounded-br-3xl"
             />
             <input
               type="button"
-              value="Get some evidence!"
+              value={loading ? "Generating..." : "Get some evidence!"}
+              disabled={loading}
+              onClick={handleGetEvidenceClick}
               style={{ fontFamily: "Poppins" }}
-              className="w-96 ml-4 bg-[#242424] mt-2 py-4 px-2 rounded-md text-white text-lg transition-all cursor-pointer hover:bg-[#131313]"
+              className="w-full ml-4 bg-[#242424] mt-2 py-4 px-2 rounded-md text-white text-lg transition-all cursor-pointer hover:bg-[#131313]"
             />
-            <div className="w-96 mt-4 ml-5  text-center items-center justify-center">
+            <div className="w-full mt-4 ml-5 text-center items-center justify-center">
               <h4
                 className="text-xl font-semibold"
                 style={{ fontFamily: "Poppins" }}
@@ -43,24 +116,17 @@ const GetEvidencePage = (props: Props) => {
               </h4>
               <input
                 type="button"
-                value="Completely random theory evidence!"
+                value={
+                  loading
+                    ? "Generating..."
+                    : "Completely random theory evidence!"
+                }
+                disabled={loading}
+                onClick={handleRandomTheoryClick}
                 style={{ fontFamily: "Poppins" }}
-                className="w-96  bg-[#c4a454] mt-2 py-4 px-2 rounded-md text-black mb-4 text-lg transition-all cursor-pointer hover:bg-[#af903f]"
+                className="w-full bg-[#c4a454] mt-2 py-4 px-2 rounded-md text-black mb-4 text-lg transition-all cursor-pointer hover:bg-[#af903f]"
               />
             </div>
-          </div>
-          <div className="flex flex-col justify-center items-center">
-            <div className="w-[100vh] border-[1.5px] border-black  border-dashed h-[55vh] bg-[#c7c7c7] rounded-md flex justify-center items-center">
-              <h3 style={{ fontFamily: "Poppins" }} className="text-xl">
-                &lt;Your ppt here&gt;
-              </h3>
-            </div>
-            <input
-              type="button"
-              className="w-full bg-[#fbce5a] px-2 py-4 mt-4 rounded-lg text-xl cursor-pointer hover:bg-[#f9c43b] transition-all"
-              style={{ fontFamily: "Poppins" }}
-              value="Download now!"
-            />
           </div>
         </div>
       </div>

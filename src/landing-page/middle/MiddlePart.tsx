@@ -1,5 +1,6 @@
 import React from "react";
 import "./middlepart.css";
+import Link from "next/link";
 
 type Props = {};
 
@@ -20,7 +21,9 @@ const MiddlePart = (props: Props) => {
             whereas others people no it's not true, you dumb person.
           </p>
           <br />
-          <button className="getProvedBtn">Get some evidence!</button>
+          <Link href="/get-evidence">
+            <button className="getProvedBtn">Get some evidence!</button>
+          </Link>
         </div>
         <div className="rightBox">
           <img src="https://cdn.dribbble.com/users/1126935/screenshots/16524076/media/ea5e89630c33cec74d38f2febc6c2b38.png" />
