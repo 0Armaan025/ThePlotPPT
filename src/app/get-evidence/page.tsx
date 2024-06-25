@@ -17,16 +17,13 @@ const GetEvidencePage = (props: Props) => {
   const handleGetEvidenceClick = async () => {
     setLoading(true);
     try {
-      const response = await fetch(
-        "https://5000-0armaan025-conspiracypp-sbtocym0qar.ws-us114.gitpod.io/generate_ppt",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams({ theory: inputText }),
-        }
-      );
+      const response = await fetch("http://127.0.0.1:5000/generate_ppt", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({ theory: inputText }),
+      });
 
       if (response.ok) {
         const blob = await response.blob();
@@ -48,15 +45,12 @@ const GetEvidencePage = (props: Props) => {
   const handleRandomTheoryClick = async () => {
     setLoading(true);
     try {
-      const response = await fetch(
-        "https://5000-0armaan025-conspiracypp-sbtocym0qar.ws-us114.gitpod.io/generate_ppt",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-        }
-      );
+      const response = await fetch("http://127.0.0.1:5000/generate_ppt", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      });
 
       if (response.ok) {
         const blob = await response.blob();

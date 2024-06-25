@@ -28,6 +28,7 @@ const MiddlePart = (props: Props) => {
           <Link href="/get-evidence">
             <button className="bg-[#242424] text-white px-4 py-2 mt-4 rounded-md transition-all hover:bg-[#131313]">
               Get some evidence!
+              
             </button>
           </Link>
         </div>
@@ -45,7 +46,3 @@ const MiddlePart = (props: Props) => {
 
 export default MiddlePart;
 
-// ANTHROPIC_API_KEY=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
-// GEMINI_API_KEY=AIzaSyAbYtEwa3E0FEPpCGkYPTD7NdYwCrVASVY
-// DEEPAI_API_KEY=4ddc1d8b-6136-4139-a6a8-77c91b28b19b
-// REPLICATE_API_TOKEN=r8_3iIQiUed4x2f2Wn8auNfbGlVrCM66DW33OhYA
