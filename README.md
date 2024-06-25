@@ -1,4 +1,4 @@
-# ThePlotPPt
+# ThePlotPPT
 ## Convert any conspiracy theory idea into presentation (fun mode) for proving it right, or just have any random conspiracy theory with some evidences XD (eg: oreos are spywares by the government).
 
 <br>
