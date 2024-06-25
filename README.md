@@ -4,20 +4,34 @@
 <br>
 Do this:
 <br>
+
 1.) ``git clone https://github.com/0Armaan025/ThePlotPPT``
 <br>
+
 2.) ``cd ThePlotPPT``
 <br>
+
 3.) ``npm install``, install npm please if not already installed.
 <br>
+
 4.) ``npm run dev``, and you'll have it up and running! :D
 <br>
+
 
 ** IMPORTANT POINTS **
 
 <br>
 
 - Make sure your api endpoint is correct.
+
+  <br>
+
+  Make sure to give it a ⭐ :)
+
+<br>
+
+Thanks, 
+- Armaan
 
 <br>
 
