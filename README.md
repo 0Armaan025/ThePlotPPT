@@ -25,6 +25,10 @@ Do this:
 - Make sure your api endpoint is correct.
 
   <br>
+  
+- Make sure you already have done the steps mentioned here: https://github.com/0Armaan025/conspiracy-ppt-generator-api/blob/main/README.md
+
+<br>
 
   Make sure to give it a ⭐ :)
 
@@ -35,4 +39,3 @@ Thanks,
 
 <br>
 
-- Make sure you already have done the steps mentioned here: https://github.com/0Armaan025/conspiracy-ppt-generator-api/blob/main/README.md
